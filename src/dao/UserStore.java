@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.sun.istack.internal.logging.Logger;
+
 import model.User;
 
 import java.sql.Connection;
@@ -16,11 +18,17 @@ import java.sql.SQLException;
 
 public class UserStore implements IUserStore {
 
+	static Logger logger = Logger.getLogger(UserStore.class.getName(), null);
+	
+	
 	@Override
 	public int InsertUser(User user) throws Exception {
 		// TODO Auto-generated method stub
 		
 		String sql ="insert into Users (id,name) values ("+user.Id+",'"+user.Name+"')";
+		
+		logger.info(sql);
+		
 		//String sql ="insert into users (id,name) values (2020,'222')";
 		
 		Connection conn=null;
@@ -38,8 +46,7 @@ public class UserStore implements IUserStore {
 			e.printStackTrace();
 			
 			System.out.println(sql);
-			
-			
+		
 			
 		}
 		catch(Exception e){
