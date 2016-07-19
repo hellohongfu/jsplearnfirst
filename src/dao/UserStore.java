@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.sun.istack.internal.logging.Logger;
+
 
 import model.User;
 
@@ -15,10 +15,12 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.sql.SQLException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
 
 public class UserStore implements IUserStore {
 
-	static Logger logger = Logger.getLogger(UserStore.class.getName(), null);
+	private static final Logger logger = LogManager.getLogger("HelloWorld");
 	
 	
 	@Override
@@ -47,11 +49,13 @@ public class UserStore implements IUserStore {
 			
 			System.out.println(sql);
 		
-			
+			logger.info("This is info message."); 
+		
 		}
 		catch(Exception e){
 			
 			e.printStackTrace();
+			logger.error("SQL执行出错", e);
 		}
 		finally{
 			conn.close();
@@ -72,6 +76,8 @@ public class UserStore implements IUserStore {
 		// TODO Auto-generated method stub
 
 		String sql ="select * from users order by id desc ";
+		
+		logger.info(sql);
 		//String sql ="insert into users (id,name) values (2020,'222')";
 		List<User> users=new  ArrayList<User>();
 		Connection conn=null;
@@ -105,7 +111,7 @@ public class UserStore implements IUserStore {
 			e.printStackTrace();
 			
 			System.out.println(sql);
-			
+			logger.error("SQL执行出错", e);
 		}
 		catch(Exception e){
 			
