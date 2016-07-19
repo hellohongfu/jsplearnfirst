@@ -1,0 +1,98 @@
+@CHARSET "UTF-8";
+
+table {
+	border: 0;
+	margin: 0;
+	padding: 0; 
+	border-collapse : collapse;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td, th {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border-collapse : collapse;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+/* table td, table th{
+	
+	text-align:center;
+	border:1px solid black;
+	border-bottom-width:0px;
+	border-left-width:0px;
+	padding:0;
+} */
+.ck{
+	width: 80px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+
+.phdj {
+	width: 200px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black
+}
+
+.scqy {
+	width: 200px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black
+}
+
+.kh {
+	width: 80px;
+    border-right: 1px solid black;
+	border-bottom: 1px solid black
+	
+}
+
+.sbl {
+	width: 50px;
+      border-right: 1px solid black;
+	border-bottom: 1px solid black
+	
+}
+
+.xdl {
+	width: 50px;
+	
+	  border-right: 1px solid black;
+	border-bottom: 1px solid black
+}
+
+.syl {
+	width: 50px;
+	
+	border-bottom: 1px solid black
+}
+
+.kcl {
+	width: 50px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black
+}
+
+.hbdlTable {
+	border: 1px solid black;
+}
+
+.hbdlTable th {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.tddl {
+	
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+	
+}
+
+
+
